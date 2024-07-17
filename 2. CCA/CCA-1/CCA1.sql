@@ -30,7 +30,7 @@ VALUES  (1, 'Abhishek', 'Kumar', 'abhishek@gmail.com', 24, '1999-07-27', 'May', 
 
 -- Check Table
 SELECT * FROM employees;
-
+------------------------------------------------------------------------------------------------------
 
 --Q.1.> Write a query to display your birthday( day of week)
 
@@ -39,11 +39,15 @@ SELECT FName, Lname, DOB,
 FROM employees
 WHERE EmpID = 1;
 
+------------------------------------------------------------------------------------------------------
+
 --Q.2.> Write a query to display your age in days
 
 SELECT FName, Lname, Age, Age * 365 AS AgeInDay
 FROM employees
 WHERE EmpID = 1;
+
+------------------------------------------------------------------------------------------------------
 
 --Q.3.> Write a query to display all employees information those who joined before 5 years in the current month
 
@@ -51,6 +55,8 @@ SELECT FName, Lname, DOJ_Month, DOJ_Year
 FROM employees
 WHERE DOJ_Month = 'July'
 	AND (DOJ_Year < 2020);
+
+------------------------------------------------------------------------------------------------------
 
 --Q.4.> Create table Employee with empno, ename, sal, doj columns and perform the following operations in a single transaction
 
@@ -84,7 +90,51 @@ SELECT *
 FROM Employee
 WHERE empno = 1;
 
+------------------------------------------------------------------------------------------------------
 
 --Q.5.> Create a user defined function calculate Bonus for all employees of a  given job
 
+-- add Depno in Employee table.
+ALTER TABLE Employee
+ADD Deptno INT;
 
+-- update Employee
+UPDATE Employee
+SET Deptno = 5
+WHERE empno = 2;
+
+UPDATE Employee
+SET Deptno = 10
+WHERE empno = 3;
+
+SELECT * FROM Employee;
+
+-- add new employee
+INSERT INTO Employee (empno, ename, sal, doj, Deptno)
+VALUES 
+    (1, 'Abhi', 50000.00, '2020-01-15', 20);
+	(4, 'Zoya', 48000.00, '2021-03-25', 10),
+    (5, 'Ritesh', 52000.00, '2020-11-12', 20),
+    (6, 'Suraj', 60000.00, '2017-08-18', 15);
+
+-- Function to Calculate Bonus
+CREATE FUNCTION dbo.CalBonus (@Deptno INT, @sal DECIMAL(10, 2))
+RETURNS DECIMAL(10, 2)
+AS
+BEGIN
+    DECLARE @Bonus DECIMAL(10, 2);
+    
+    SET @Bonus = 
+        CASE 
+            WHEN @Deptno = 10 THEN @Sal * 0.15  -- 15% bonus --> Deptno 10
+            WHEN @Deptno = 20 THEN @Sal * 0.20  -- 20% bonus --> Deptno 20
+            ELSE @Sal * 0.05                    -- 5% bonus  --> all other Deptno
+        END;
+        
+    RETURN @Bonus;
+END;
+
+
+-- Display
+SELECT empno, ename, sal, doj, Deptno, dbo.CalBonus(Deptno, sal) AS Bonus
+FROM Employee;
