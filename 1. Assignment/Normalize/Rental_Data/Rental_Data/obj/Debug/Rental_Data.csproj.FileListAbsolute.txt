@@ -1,0 +1,7 @@
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\obj\Debug\Rental_Data.csproj.AssemblyReference.cache
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\obj\Debug\Rental_Data.csproj.CoreCompileInputs.cache
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\bin\Debug\Rental_Data.exe.config
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\bin\Debug\Rental_Data.exe
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\bin\Debug\Rental_Data.pdb
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\obj\Debug\Rental_Data.exe
+D:\GitHub\2..SQL\1. Assignment\Normalize\Rental_Data\Rental_Data\obj\Debug\Rental_Data.pdb

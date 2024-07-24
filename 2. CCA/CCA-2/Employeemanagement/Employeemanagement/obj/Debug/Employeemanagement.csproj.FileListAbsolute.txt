@@ -1,0 +1,7 @@
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\obj\Debug\Employeemanagement.csproj.AssemblyReference.cache
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\obj\Debug\Employeemanagement.csproj.CoreCompileInputs.cache
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\bin\Debug\Employeemanagement.exe.config
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\bin\Debug\Employeemanagement.exe
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\bin\Debug\Employeemanagement.pdb
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\obj\Debug\Employeemanagement.exe
+D:\GitHub\2..SQL\2. CCA\CCA-2\Employeemanagement\Employeemanagement\obj\Debug\Employeemanagement.pdb
